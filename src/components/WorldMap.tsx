@@ -66,8 +66,9 @@ const handleMouseMove = (e) => {
   };
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto">
-        <div style={{width:"800px",stroke:"#2A92D3",strokeWidth:'0',strokeDasharray:"none"}}>
+    <div className="relative w-full max-w-6xl mx-auto ">
+      <div className="w-full flex justify-center items-center ">
+        <div style={{width:"800px",stroke:"#2A92D3",strokeWidth:'0',strokeDasharray:"none"  }}>
    <svg version="1.1" id="svg2-R19ujepncrl4va" x="0px" y="0px" viewBox="1.1599996089935303 0 1009.1100463867188 651.7900390625" 
      onMouseMove={handleMouseMove}>
    <path id="Africa-R19ujepncrl4va" 
@@ -106,6 +107,7 @@ const handleMouseMove = (e) => {
    </path>
    </svg>
    </div>
+    </div>
 
      {hoveredContinent && (
   <div
