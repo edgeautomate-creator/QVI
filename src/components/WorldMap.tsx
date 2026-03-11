@@ -11,7 +11,15 @@ interface Continent {
 export default function WorldMap() {
   const navigate = useNavigate();
   const { t } = useLanguage();
-  const [hoveredContinent, setHoveredContinent] = useState<string | null>(null);
+  const [hoveredContinent, setHoveredContinent] = useState<string | null>(null);   
+  const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
+
+const handleMouseMove = (e) => {
+  setTooltipPos({
+    x: e.clientX,
+    y: e.clientY,
+  });
+};
 
   const continents: Continent[] = [
     {
@@ -60,7 +68,8 @@ export default function WorldMap() {
   return (
     <div className="relative w-full max-w-6xl mx-auto">
         <div style={{width:"800px",stroke:"#2A92D3",strokeWidth:'0',strokeDasharray:"none"}}>
-   <svg version="1.1" id="svg2-R19ujepncrl4va" x="0px" y="0px" viewBox="1.1599996089935303 0 1009.1100463867188 651.7900390625">
+   <svg version="1.1" id="svg2-R19ujepncrl4va" x="0px" y="0px" viewBox="1.1599996089935303 0 1009.1100463867188 651.7900390625" 
+     onMouseMove={handleMouseMove}>
    <path id="Africa-R19ujepncrl4va" 
                onClick={() => handleAreaClick('africa')}
                onMouseEnter={() => setHoveredContinent('africa')}
