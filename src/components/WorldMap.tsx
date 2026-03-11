@@ -107,13 +107,19 @@ const handleMouseMove = (e) => {
    </svg>
    </div>
 
-      {hoveredContinent && (
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-[#1a2b5c] text-white px-6 py-3 rounded-lg shadow-lg">
-          <p className="text-lg font-semibold">
-            {continents.find(c => c.id === hoveredContinent)?.name}
-          </p>
-        </div>
-      )}
+     {hoveredContinent && (
+  <div
+    className="absolute bg-[#1a2b5c] text-white px-6 py-3 rounded-lg shadow-lg pointer-events-none"
+    style={{
+      left: tooltipPos.x + 10,
+      top: tooltipPos.y + 10,
+    }}
+  >
+    <p className="text-lg font-semibold">
+      {continents.find(c => c.id === hoveredContinent)?.name}
+    </p>
+  </div>
+)}
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-12">
         {continents.map((continent) => (
