@@ -40,6 +40,7 @@ export default function ViajesEspeciales() {
         </div>
 
         <WorldMap />
+
         <div className="mt-24 bg-gradient-to-r from-[#1a2b5c] to-[#243a75] rounded-2xl p-12 text-white text-center">
           <h3 className="text-3xl font-bold mb-4">
             {language === 'es'
