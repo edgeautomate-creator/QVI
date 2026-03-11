@@ -113,8 +113,8 @@ const handleMouseMove = (e) => {
   <div
     className="absolute bg-[#1a2b5c] text-white px-6 py-3 rounded-lg shadow-lg pointer-events-none"
     style={{
-      left: tooltipPos.x - 500,
-      top: tooltipPos.y - 500,
+      left: tooltipPos.x - 200,
+      top: tooltipPos.y - 200,
     }}
   >
     <p className="text-lg font-semibold">
