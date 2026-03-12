@@ -15,35 +15,6 @@ export default function Egypt2026() {
 
   return (
     <div className="min-h-screen">
-      <section className="relative h-[60vh] min-h-[500px] bg-black">
-        <img
-          src="/angelpic.jpg"
-          alt="Holy Family in Egypt with pyramids"
-          className="absolute inset-0 w-full h-full object-cover opacity-70"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30"></div>
-        <div className="relative h-full flex items-center justify-center">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="inline-block bg-[#ff6b6b] text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              {t('featured.title')}
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg">
-              {t('egypt.title')}
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-100 mb-6 drop-shadow-md">
-              {t('egypt.subtitle')}
-            </p>
-            <div className="flex items-center justify-center space-x-2 text-lg mb-4 text-white">
-              <Calendar className="w-6 h-6 text-[#ff6b6b]" />
-              <span className="drop-shadow-md">{t('egypt.dates')}</span>
-            </div>
-            <p className="text-lg text-gray-100 italic drop-shadow-md">
-              {t('egypt.guide')}
-            </p>
-          </div>
-        </div>
-      </section>
-
       <section className="py-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-lg text-gray-700 leading-relaxed text-center">
