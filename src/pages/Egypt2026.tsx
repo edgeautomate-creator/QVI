@@ -15,6 +15,34 @@ export default function Egypt2026() {
 
   return (
     <div className="min-h-screen">
+      <section className="relative bg-gradient-to-br from-[#c49a3f] via-[#d4af37] to-[#1a2b5c] text-white py-16 md:py-24">
+        <div className="absolute inset-0 bg-black opacity-40"></div>
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: 'url(/Picture1.png)', opacity: 0.2 }}
+        ></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <div className="inline-block bg-[#ff6b6b] text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              {t('egypt.featured')}
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              {t('egypt.title')}
+            </h1>
+            <p className="text-xl text-gray-200 mb-6">
+              {t('egypt.subtitle')}
+            </p>
+            <div className="flex items-center justify-center space-x-2 text-lg mb-4">
+              <Calendar className="w-6 h-6 text-[#ff6b6b]" />
+              <span>{t('egypt.dates')}</span>
+            </div>
+            <p className="text-lg text-gray-200 italic">
+              {t('egypt.guide')}
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-lg text-gray-700 leading-relaxed text-center">
