@@ -25,12 +25,20 @@ export default function Navigation() {
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center space-x-3">
             <img
               src="/QVILogo-new.png"
               alt="QVI Travel Group"
               className="h-16 w-auto"
             />
+            <div className="flex flex-col">
+              <span className="text-[#1a2b5c] font-bold text-lg leading-tight">
+                QVI Travel Group
+              </span>
+              <span className="text-gray-600 text-xs font-medium">
+                Desde 2007
+              </span>
+            </div>
           </Link>
 
           <div className="hidden lg:flex items-center space-x-6">
