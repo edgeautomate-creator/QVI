@@ -141,7 +141,7 @@ const translations = {
         item5: 'Visa de entrada a Egipto',
         item6: 'Gastos personales y manejo de equipaje en aeropuertos'
       },
-      cta: 'Reserva Tu Lugar Ya!',
+      cta: 'Reserva tu Lugar Ya!',
       ctaText: 'Los espacios son limitados. Contáctenos hoy para asegurar su lugar en esta peregrinación única.',
       days: {
         day1: {
