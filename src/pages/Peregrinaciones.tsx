@@ -1,5 +1,6 @@
 import { useLanguage } from '../contexts/LanguageContext';
 import { Link } from 'react-router-dom';
+import { Mail } from 'lucide-react';
 
 export default function Peregrinaciones() {
   const { language } = useLanguage();
@@ -16,7 +17,9 @@ export default function Peregrinaciones() {
       holylandTitle: 'Holy Land 2026',
       holylandDescription: 'Walk in the footsteps of Jesus through Jerusalem, Nazareth, Bethlehem and the Sea of Galilee',
       viewDetails: 'View Details',
-      comingSoon: 'More pilgrimages coming soon...'
+      organizeTitle: 'Organize Your Own Pilgrimage',
+      organizeSubtitle: 'We design customized pilgrimages for your group, parish, or diocese. Contact us and we will create a unique spiritual journey tailored to your needs.',
+      organizeButton: 'Click Here to Email Us'
     },
     es: {
       title: 'Peregrinaciones',
@@ -29,7 +32,9 @@ export default function Peregrinaciones() {
       holylandTitle: 'Tierra Santa 2026',
       holylandDescription: 'Camina en los pasos de Jesús por Jerusalén, Nazareth, Belén y el Mar de Galilea',
       viewDetails: 'Ver Detalles',
-      comingSoon: 'Más peregrinaciones próximamente...'
+      organizeTitle: 'Organiza tu propia peregrinación',
+      organizeSubtitle: 'Diseñamos peregrinaciones a medida para tu grupo, parroquia o diócesis. Contáctanos y crearemos un viaje espiritual único adaptado a tus necesidades.',
+      organizeButton: 'Haz clic aquí para escribirnos'
     }
   };
 
@@ -131,8 +136,20 @@ export default function Peregrinaciones() {
           </div>
         </div>
 
-        <div className="text-center text-gray-500 text-lg">
-          {t.comingSoon}
+        <div className="bg-gradient-to-br from-blue-900 to-blue-700 rounded-2xl p-10 md:p-14 text-center shadow-xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            {t.organizeTitle}
+          </h2>
+          <p className="text-blue-100 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+            {t.organizeSubtitle}
+          </p>
+          <a
+            href="mailto:Reservations@qvitravel.miami?subject=Consulta%3A%20Organizar%20Peregrinaci%C3%B3n"
+            className="inline-flex items-center gap-3 bg-white text-blue-900 font-bold px-8 py-4 rounded-full text-lg shadow-lg hover:bg-blue-50 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+          >
+            <Mail className="w-5 h-5" />
+            {t.organizeButton}
+          </a>
         </div>
       </div>
     </div>
