@@ -50,7 +50,7 @@ export default function Cruceros() {
       <div
         className="relative h-[420px] md:h-[480px] bg-cover bg-center"
         style={{
-          backgroundImage: 'linear-gradient(to bottom, rgba(12, 74, 110, 0.85), rgba(26, 43, 92, 0.9)), url(https://images.pexels.com/photos/813011/pexels-photo-813011.jpeg?auto=compress&cs=tinysrgb&w=1920)',
+          backgroundImage: 'linear-gradient(to bottom, rgba(12, 74, 110, 0.85), rgba(26, 43, 92, 0.9)), url(/pexels-vinicius-dattwyler-721533-1561273.jpg)',
         }}
       >
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white px-4">
