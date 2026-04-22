@@ -27,6 +27,7 @@ import Oceania from './pages/continents/Oceania';
 import America from './pages/continents/America';
 import LatinAmerica from './pages/continents/LatinAmerica';
 import Cruceros from './pages/Cruceros';
+import DueroCruise from './pages/DueroCruise';
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
               <Route path="/viajes-especiales/america" element={<America />} />
               <Route path="/viajes-especiales/latin-america" element={<LatinAmerica />} />
               <Route path="/cruceros" element={<Cruceros />} />
+              <Route path="/cruceros/duero-valley" element={<DueroCruise />} />
 
               <Route path="/tours" element={<Navigate to="/viajes-especiales" replace />} />
               <Route path="/paquetes" element={<Navigate to="/viajes-especiales" replace />} />
