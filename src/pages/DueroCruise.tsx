@@ -19,7 +19,6 @@ export default function DueroCruise() {
       subtitle: 'Immerse yourself in the festive atmosphere of Portugal and Spain',
       duration: '6 Days / 5 Nights',
       route: 'Oporto (Round Trip)',
-      ref: 'Ref: POF_PPES',
       intro: 'Dive into the festive spirit of Portugal and Spain, where you will discover their characteristic way of life. Visit Oporto, a subtle blend of modernity and history, famous for its wine, and Salamanca with its cathedral -- the "golden city" of Spain, rich in architecture, religious culture, and gastronomy.',
       highlights: 'Cruise Highlights',
       itinerary: 'Day-by-Day Itinerary',
@@ -49,7 +48,6 @@ export default function DueroCruise() {
       subtitle: 'Sumérjase en el ambiente festivo de Portugal y España',
       duration: '6 Días / 5 Noches',
       route: 'Oporto (Ida y Vuelta)',
-      ref: 'Ref: POF_PPES',
       intro: 'Sumérjase en el ambiente festivo de Portugal y España donde descubrirá su característico estilo de vida. Visite Oporto, una mezcla sutil de modernidad e historia, famoso por su vino, además de Salamanca con su catedral, la "ciudad de oro" de España, rica en arquitectura, cultura religiosa y gastronomía.',
       highlights: 'Destacados del Crucero',
       itinerary: 'Itinerario Día a Día',
@@ -314,7 +312,6 @@ export default function DueroCruise() {
                 <span>CroisiEurope</span>
               </div>
             </div>
-            <p className="text-sm text-cyan-200/70">{t.ref}</p>
           </div>
         </div>
       </section>
