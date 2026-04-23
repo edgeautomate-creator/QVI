@@ -35,6 +35,7 @@ export default function DueroCruise() {
       whatsapp: 'WhatsApp',
       formTitle: 'Request More Information',
       pricing: 'Pricing',
+      priceFrom: 'From 1,225 €',
       pricingContact: 'Contact Us for Cabin Pricing',
       pricingNote: 'Multiple cabin categories available. Contact us for detailed pricing, availability, and group rates.',
       showMore: 'Show all excursions',
@@ -64,6 +65,7 @@ export default function DueroCruise() {
       whatsapp: 'WhatsApp',
       formTitle: 'Solicitar Más Información',
       pricing: 'Precios',
+      priceFrom: 'Desde 1,225 €',
       pricingContact: 'Contáctenos para Precios de Camarotes',
       pricingNote: 'Múltiples categorías de camarotes disponibles. Contáctenos para precios detallados, disponibilidad y tarifas de grupo.',
       showMore: 'Ver todas las excursiones',
@@ -351,6 +353,7 @@ export default function DueroCruise() {
           </h2>
           <div className="bg-gradient-to-br from-[#0c4a6e] to-[#155e75] rounded-2xl p-8 md:p-10 text-white text-center shadow-xl">
             <Ship className="w-12 h-12 mx-auto mb-4 text-cyan-300" />
+            <p className="text-4xl md:text-5xl font-bold mb-4">{t.priceFrom}</p>
             <h3 className="text-2xl md:text-3xl font-bold mb-3">{t.pricingContact}</h3>
             <p className="text-cyan-100 text-lg max-w-xl mx-auto mb-6">
               {t.pricingNote}
