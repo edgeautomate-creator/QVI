@@ -382,9 +382,7 @@ export default function DueroCruise() {
           <div className="grid md:grid-cols-2 gap-4">
             {highlights.map((highlight, index) => (
               <div key={index} className="flex items-start bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0c4a6e] text-white flex items-center justify-center mt-0.5 mr-4">
-                  <span className="text-xs font-bold">{index + 1}</span>
-                </div>
+                <div className="flex-shrink-0 w-3 h-3 rounded-full bg-[#0c4a6e] mt-1.5 mr-4"></div>
                 <p className="text-gray-700">{highlight}</p>
               </div>
             ))}
