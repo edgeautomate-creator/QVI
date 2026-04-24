@@ -94,7 +94,7 @@ export default function Home() {
 
             <Link to="/cruceros" className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 h-80">
               <img
-                src="https://images.pexels.com/photos/2138126/pexels-photo-2138126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src="/D1A30B24-407E-4BC6-818F-F600BF1E0A87.PNG"
                 alt="Cruceros"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
               />
