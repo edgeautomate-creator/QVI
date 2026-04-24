@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Link } from 'react-router-dom';
-import { Anchor, Ship, Calendar, MapPin, ArrowRight, Phone, Mail, Waves, Gift, Compass, Wine, ChevronDown, ChevronUp } from 'lucide-react';
+import { Anchor, Ship, Calendar, MapPin, ArrowRight, Phone, Mail, Waves, Gift, Compass, Wine, ChevronDown, ChevronUp, Star } from 'lucide-react';
 
 export default function Cruceros() {
   const { language, t } = useLanguage();
@@ -41,6 +41,11 @@ export default function Cruceros() {
       rhineRoute: 'Amsterdam \u2192 Basel',
       rhineDesc: 'From Amsterdam to Basel, a cruise rich in history. Discover Amsterdam\u2019s canals, the Keukenhof floral park, the open-air museum of Arnhem, Cologne\u2019s Gothic cathedral, the most beautiful stretch of the Rhine, Strasbourg, and the Alsatian wine capital of Colmar. All meals and beverages included onboard.',
       rhineHighlights: ['Amsterdam & Keukenhof', 'Cologne Cathedral', 'Strasbourg & Colmar', 'All-Inclusive Onboard'],
+      danubeChristmasTitle: 'Christmas Markets on the Danube (Port-to-Port)',
+      danubeChristmasDuration: '5 Days / 4 Nights',
+      danubeChristmasRoute: 'Vienna (Round Trip)',
+      danubeChristmasDesc: 'Discover the most magical Christmas markets of Europe on the Danube. Stroll through Vienna\'s City Hall market, explore Budapest\'s UNESCO-listed banks, and visit Bratislava\'s charming craft market. Austrian-themed dinner, gala night, and all meals and beverages included onboard.',
+      danubeChristmasHighlights: ['Vienna Christmas Market', 'Budapest UNESCO Heritage', 'Bratislava Craft Market', 'All-Inclusive Onboard'],
       danubeTitle: 'Budapest, Pearl of the Danube & Iron Gates',
       danubeDuration: '8 Days / 7 Nights',
       danubeRoute: 'Budapest (Round Trip)',
@@ -101,6 +106,11 @@ export default function Cruceros() {
       rhineRoute: '\u00c1msterdam \u2192 Basilea',
       rhineDesc: 'De \u00c1msterdam a Basilea, un crucero rico en historia. Descubra los canales de \u00c1msterdam, el parque floral del Keukenhof, el museo al aire libre de Arnhem, la catedral g\u00f3tica de Colonia, el tramo m\u00e1s bello del Rin, Estrasburgo y la capital de los vinos alsacianos, Colmar. Todas las comidas y bebidas incluidas a bordo.',
       rhineHighlights: ['\u00c1msterdam y Keukenhof', 'Catedral de Colonia', 'Estrasburgo y Colmar', 'Todo Incluido a Bordo'],
+      danubeChristmasTitle: 'Mercados de Navidad en el Danubio (Puerto/Puerto)',
+      danubeChristmasDuration: '5 D\u00edas / 4 Noches',
+      danubeChristmasRoute: 'Viena (Ida y Vuelta)',
+      danubeChristmasDesc: 'Descubra los mercados navide\u00f1os m\u00e1s m\u00e1gicos de Europa en el Danubio. Pasee por el mercado del Ayuntamiento de Viena, explore las orillas de Budapest Patrimonio UNESCO y visite el encantador mercado de artesan\u00eda de Bratislava. Cena tem\u00e1tica austriaca, noche de gala y todas las comidas y bebidas incluidas a bordo.',
+      danubeChristmasHighlights: ['Mercado de Navidad de Viena', 'Budapest Patrimonio UNESCO', 'Mercado de Artesan\u00eda de Bratislava', 'Todo Incluido a Bordo'],
       danubeTitle: 'Budapest, Perla del Danubio y las Puertas de Hierro',
       danubeDuration: '8 D\u00edas / 7 Noches',
       danubeRoute: 'Budapest (Ida y Vuelta)',
@@ -457,6 +467,57 @@ export default function Cruceros() {
               <div className="flex items-center justify-between">
                 <span className="text-sm text-gray-400">{c.operator}</span>
                 <span className="inline-flex items-center text-[#92400e] font-semibold group-hover:translate-x-1 transition-transform">
+                  {c.viewCruise}
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </span>
+              </div>
+            </div>
+          </div>
+        </Link>
+
+        {/* Danube Christmas Markets Cruise Card */}
+        <Link
+          to="/cruceros/danube-christmas-markets"
+          className="group block bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-[#7b1c1c]/20 mb-12"
+        >
+          <div className="md:flex">
+            <div className="md:w-2/5 p-8 md:p-10 text-white flex flex-col justify-center relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #7b1c1c 0%, #1a3a5c 60%, #0f2a45 100%)' }}>
+              <div className="absolute top-4 right-4 opacity-10">
+                <Star className="w-32 h-32" />
+              </div>
+              <div className="relative">
+                <span className="inline-block bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4 backdrop-blur-sm">
+                  {c.featured}
+                </span>
+                <h3 className="text-2xl md:text-3xl font-bold mb-3">
+                  {c.danubeChristmasTitle}
+                </h3>
+                <div className="flex flex-wrap gap-3 text-sm">
+                  <span className="flex items-center bg-white/10 px-3 py-1.5 rounded-lg">
+                    <Calendar className="w-4 h-4 mr-1.5" />
+                    {c.danubeChristmasDuration}
+                  </span>
+                  <span className="flex items-center bg-white/10 px-3 py-1.5 rounded-lg">
+                    <MapPin className="w-4 h-4 mr-1.5" />
+                    {c.danubeChristmasRoute}
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="md:w-3/5 p-8 md:p-10 flex flex-col justify-center">
+              <p className="text-gray-600 leading-relaxed mb-6">
+                {c.danubeChristmasDesc}
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {c.danubeChristmasHighlights.map((h, i) => (
+                  <span key={i} className="bg-red-50 text-[#7b1c1c] text-sm font-medium px-3 py-1.5 rounded-full border border-red-100">
+                    {h}
+                  </span>
+                ))}
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-400">{c.operator}</span>
+                <span className="inline-flex items-center text-[#7b1c1c] font-semibold group-hover:translate-x-1 transition-transform">
                   {c.viewCruise}
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </span>

@@ -33,6 +33,7 @@ import GuadalquivirChristmasCruise from './pages/GuadalquivirChristmasCruise';
 import CroatiaMontenegroCruise from './pages/CroatiaMontenegroCruise';
 import RhineCruise from './pages/RhineCruise';
 import DanubeCruise from './pages/DanubeCruise';
+import DanubeChristmasCruise from './pages/DanubeChristmasCruise';
 import BerlinPragueCruise from './pages/BerlinPragueCruise';
 import GaronneCruise from './pages/GaronneCruise';
 
@@ -67,6 +68,7 @@ function App() {
               <Route path="/cruceros/guadalquivir-christmas" element={<GuadalquivirChristmasCruise />} />
               <Route path="/cruceros/croatia-montenegro" element={<CroatiaMontenegroCruise />} />
               <Route path="/cruceros/rhine-treasures" element={<RhineCruise />} />
+              <Route path="/cruceros/danube-christmas-markets" element={<DanubeChristmasCruise />} />
               <Route path="/cruceros/danube-budapest" element={<DanubeCruise />} />
               <Route path="/cruceros/berlin-prague" element={<BerlinPragueCruise />} />
               <Route path="/cruceros/garonne-bordeaux" element={<GaronneCruise />} />
