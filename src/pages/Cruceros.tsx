@@ -39,6 +39,11 @@ export default function Cruceros() {
       rhineRoute: 'Amsterdam \u2192 Basel',
       rhineDesc: 'From Amsterdam to Basel, a cruise rich in history. Discover Amsterdam\u2019s canals, the Keukenhof floral park, the open-air museum of Arnhem, Cologne\u2019s Gothic cathedral, the most beautiful stretch of the Rhine, Strasbourg, and the Alsatian wine capital of Colmar. All meals and beverages included onboard.',
       rhineHighlights: ['Amsterdam & Keukenhof', 'Cologne Cathedral', 'Strasbourg & Colmar', 'All-Inclusive Onboard'],
+      danubeTitle: 'Budapest, Pearl of the Danube & Iron Gates',
+      danubeDuration: '8 Days / 7 Nights',
+      danubeRoute: 'Budapest (Round Trip)',
+      danubeDesc: 'Witness Europe\'s greatest river spectacle -- the Iron Gates. Discover Budapest, Belgrade, Osijek, Golubac Fortress, Novi Sad, P\u00e9cs, and the Hungarian Puszta. A journey through Hungary, Croatia, Serbia, and Romania, blending Austro-Hungarian, Ottoman, and Slavic cultures. All meals and beverages included onboard.',
+      danubeHighlights: ['The Iron Gates Gorge', 'Budapest & Belgrade', 'P\u00e9cs & Hungarian Puszta', 'All-Inclusive Onboard'],
       moreComing: 'More cruises coming soon',
       moreComingDesc: 'We are working on adding more cruise options. Contact us to be the first to know.',
       introDesc: 'We offer two types of cruises designed to provide unique and memorable experiences:',
@@ -82,6 +87,11 @@ export default function Cruceros() {
       rhineRoute: '\u00c1msterdam \u2192 Basilea',
       rhineDesc: 'De \u00c1msterdam a Basilea, un crucero rico en historia. Descubra los canales de \u00c1msterdam, el parque floral del Keukenhof, el museo al aire libre de Arnhem, la catedral g\u00f3tica de Colonia, el tramo m\u00e1s bello del Rin, Estrasburgo y la capital de los vinos alsacianos, Colmar. Todas las comidas y bebidas incluidas a bordo.',
       rhineHighlights: ['\u00c1msterdam y Keukenhof', 'Catedral de Colonia', 'Estrasburgo y Colmar', 'Todo Incluido a Bordo'],
+      danubeTitle: 'Budapest, Perla del Danubio y las Puertas de Hierro',
+      danubeDuration: '8 D\u00edas / 7 Noches',
+      danubeRoute: 'Budapest (Ida y Vuelta)',
+      danubeDesc: 'Asista al mayor desfile fluvial de Europa: las Puertas de Hierro. Descubra Budapest, Belgrado, Osijek, la fortaleza de Golubac, Novi Sad, P\u00e9cs y la Puszta h\u00fangara. Un viaje por Hungr\u00eda, Croacia, Serbia y Ruman\u00eda entre culturas austroh\u00fangaras, otomanas y eslavas. Todas las comidas y bebidas incluidas a bordo.',
+      danubeHighlights: ['Las Puertas de Hierro', 'Budapest y Belgrado', 'P\u00e9cs y la Puszta', 'Todo Incluido a Bordo'],
       moreComing: 'M\u00e1s cruceros pr\u00f3ximamente',
       moreComingDesc: 'Estamos trabajando en agregar m\u00e1s opciones de cruceros. Cont\u00e1ctenos para ser el primero en enterarse.',
       introDesc: 'Contamos con dos tipos de cruceros dise\u00f1ados para ofrecer experiencias \u00fanicas y memorables:',
@@ -405,6 +415,57 @@ export default function Cruceros() {
               <div className="flex items-center justify-between">
                 <span className="text-sm text-gray-400">{c.operator}</span>
                 <span className="inline-flex items-center text-[#92400e] font-semibold group-hover:translate-x-1 transition-transform">
+                  {c.viewCruise}
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </span>
+              </div>
+            </div>
+          </div>
+        </Link>
+
+        {/* Danube Cruise Card */}
+        <Link
+          to="/cruceros/danube-budapest"
+          className="group block bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-[#1a4e7a]/20 mb-12"
+        >
+          <div className="md:flex">
+            <div className="md:w-2/5 bg-gradient-to-br from-[#1e3a5f] via-[#1a4e7a] to-[#0f3460] p-8 md:p-10 text-white flex flex-col justify-center relative overflow-hidden">
+              <div className="absolute top-4 right-4 opacity-10">
+                <Anchor className="w-32 h-32" />
+              </div>
+              <div className="relative">
+                <span className="inline-block bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4 backdrop-blur-sm">
+                  {c.featured}
+                </span>
+                <h3 className="text-2xl md:text-3xl font-bold mb-3">
+                  {c.danubeTitle}
+                </h3>
+                <div className="flex flex-wrap gap-3 text-sm">
+                  <span className="flex items-center bg-white/10 px-3 py-1.5 rounded-lg">
+                    <Calendar className="w-4 h-4 mr-1.5" />
+                    {c.danubeDuration}
+                  </span>
+                  <span className="flex items-center bg-white/10 px-3 py-1.5 rounded-lg">
+                    <MapPin className="w-4 h-4 mr-1.5" />
+                    {c.danubeRoute}
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="md:w-3/5 p-8 md:p-10 flex flex-col justify-center">
+              <p className="text-gray-600 leading-relaxed mb-6">
+                {c.danubeDesc}
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {c.danubeHighlights.map((h, i) => (
+                  <span key={i} className="bg-sky-50 text-[#1a4e7a] text-sm font-medium px-3 py-1.5 rounded-full border border-sky-100">
+                    {h}
+                  </span>
+                ))}
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-400">{c.operator}</span>
+                <span className="inline-flex items-center text-[#1a4e7a] font-semibold group-hover:translate-x-1 transition-transform">
                   {c.viewCruise}
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </span>
