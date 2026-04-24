@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Link } from 'react-router-dom';
-import { Anchor, Ship, Calendar, MapPin, ArrowRight, Phone, Mail, Waves, Gift, Compass, Wine } from 'lucide-react';
+import { Anchor, Ship, Calendar, MapPin, ArrowRight, Phone, Mail, Waves, Gift, Compass, Wine, ChevronDown, ChevronUp } from 'lucide-react';
 
 export default function Cruceros() {
   const { language, t } = useLanguage();
+  const [showAll, setShowAll] = useState(false);
 
   const content = {
     en: {
@@ -54,6 +56,8 @@ export default function Cruceros() {
       garonneRoute: 'Bordeaux (Round Trip)',
       garonneDesc: 'Navigate the heart of UNESCO-listed Bordeaux and its wine country. Discover the M\u00e9doc grand crus, the Vauban citadel of Blaye, medieval Saint-\u00c9milion, and the Bassins des Lumi\u00e8res immersive art experience. Includes an onboard oyster tasting paired with white wine. All meals and beverages included.',
       garonneHighlights: ['Bordeaux UNESCO Heritage', 'M\u00e9doc Grand Crus', 'Saint-\u00c9milion Medieval', 'Onboard Oyster Tasting'],
+      showMoreCruises: 'Ver m\u00e1s cruceros',
+      showLessCruises: 'Ver menos cruceros',
       moreComing: 'More cruises coming soon',
       moreComingDesc: 'We are working on adding more cruise options. Contact us to be the first to know.',
       introDesc: 'We offer two types of cruises designed to provide unique and memorable experiences:',
@@ -112,6 +116,8 @@ export default function Cruceros() {
       garonneRoute: 'Burdeos (Ida y Vuelta)',
       garonneDesc: 'Navegue por el coraz\u00f3n de la Burdeos Patrimonio de la Humanidad y su tierra del vino. Descubra los grands crus del M\u00e9doc, la ciudadela Vauban de Blaye, el medieval Saint-\u00c9milion y la experiencia inmersiva de los Bassins des Lumi\u00e8res. Incluye degustaci\u00f3n de ostras a bordo con vino blanco. Todas las comidas y bebidas incluidas.',
       garonneHighlights: ['Burdeos Patrimonio UNESCO', 'Grands Crus del M\u00e9doc', 'Saint-\u00c9milion Medieval', 'Degustaci\u00f3n de Ostras'],
+      showMoreCruises: 'Ver m\u00e1s cruceros',
+      showLessCruises: 'Ver menos cruceros',
       moreComing: 'M\u00e1s cruceros pr\u00f3ximamente',
       moreComingDesc: 'Estamos trabajando en agregar m\u00e1s opciones de cruceros. Cont\u00e1ctenos para ser el primero en enterarse.',
       introDesc: 'Contamos con dos tipos de cruceros dise\u00f1ados para ofrecer experiencias \u00fanicas y memorables:',
@@ -392,6 +398,22 @@ export default function Cruceros() {
           </div>
         </Link>
 
+        {/* Show More / Less Toggle */}
+        {!showAll && (
+          <div className="text-center py-6">
+            <button
+              onClick={() => setShowAll(true)}
+              className="inline-flex items-center gap-2 px-8 py-3 border-2 border-[#0c4a6e] text-[#0c4a6e] font-semibold rounded-lg hover:bg-[#0c4a6e] hover:text-white transition-all duration-200"
+            >
+              <ChevronDown className="w-5 h-5" />
+              {c.showMoreCruises}
+            </button>
+          </div>
+        )}
+
+        {showAll && (
+        <>
+
         {/* Rhine Cruise Card */}
         <Link
           to="/cruceros/rhine-treasures"
@@ -595,6 +617,20 @@ export default function Cruceros() {
             </div>
           </div>
         </Link>
+
+        {/* Show Less Toggle */}
+        <div className="text-center py-6">
+          <button
+            onClick={() => setShowAll(false)}
+            className="inline-flex items-center gap-2 px-8 py-3 border-2 border-[#0c4a6e] text-[#0c4a6e] font-semibold rounded-lg hover:bg-[#0c4a6e] hover:text-white transition-all duration-200"
+          >
+            <ChevronUp className="w-5 h-5" />
+            {c.showLessCruises}
+          </button>
+        </div>
+
+        </> /* end showAll */
+        )}
 
         {/* More Coming Soon */}
         <div className="text-center py-10 border-t border-gray-100">
