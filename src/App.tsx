@@ -29,6 +29,7 @@ import LatinAmerica from './pages/continents/LatinAmerica';
 import Cruceros from './pages/Cruceros';
 import DueroCruise from './pages/DueroCruise';
 import DueroCruisePortToPort from './pages/DueroCruisePortToPort';
+import GuadalquivirChristmasCruise from './pages/GuadalquivirChristmasCruise';
 
 function App() {
   return (
@@ -58,6 +59,7 @@ function App() {
               <Route path="/cruceros" element={<Cruceros />} />
               <Route path="/cruceros/duero-valley" element={<DueroCruise />} />
               <Route path="/cruceros/duero-port-to-port" element={<DueroCruisePortToPort />} />
+              <Route path="/cruceros/guadalquivir-christmas" element={<GuadalquivirChristmasCruise />} />
 
               <Route path="/tours" element={<Navigate to="/viajes-especiales" replace />} />
               <Route path="/paquetes" element={<Navigate to="/viajes-especiales" replace />} />

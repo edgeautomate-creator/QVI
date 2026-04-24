@@ -1,6 +1,6 @@
 import { useLanguage } from '../contexts/LanguageContext';
 import { Link } from 'react-router-dom';
-import { Anchor, Ship, Calendar, MapPin, ArrowRight, Phone, Mail, Waves } from 'lucide-react';
+import { Anchor, Ship, Calendar, MapPin, ArrowRight, Phone, Mail, Waves, Gift } from 'lucide-react';
 
 export default function Cruceros() {
   const { language, t } = useLanguage();
@@ -22,6 +22,12 @@ export default function Cruceros() {
       dueroP2PDuration: '8 Days / 7 Nights',
       dueroP2PDesc: 'An extended 8-day journey through the magnificent Duero Valley. From Oporto to Salamanca, discover Guimar\u00e3es, the charming Afurada fishing village, and the Porto wine region. Enjoy flamenco, fado, and gala evenings with all meals and beverages included.',
       dueroP2PHighlights: ['8 Days / 7 Nights', 'Guimar\u00e3es & Afurada', 'Fado & Flamenco Nights', 'All-Inclusive Onboard'],
+      christmasTitle: 'Christmas on the Guadalquivir & Bay of C\u00e1diz',
+      christmasDuration: '6 Days / 5 Nights',
+      christmasDates: 'Dec 22 - 27, 2026',
+      christmasRoute: 'Seville (Round Trip)',
+      christmasDesc: 'Celebrate Christmas cruising along the Guadalquivir through Andalusia. Enjoy Christmas Eve onboard, visit Seville, C\u00e1diz, Jerez, and C\u00f3rdoba. Special Christmas dinner with wines, Midnight Mass, and a Christmas gift. All meals and beverages included.',
+      christmasHighlights: ['Christmas Cruise', 'Seville & C\u00e1diz', 'C\u00f3rdoba Excursion', 'All-Inclusive Onboard'],
       moreComing: 'More cruises coming soon',
       moreComingDesc: 'We are working on adding more cruise options. Contact us to be the first to know.',
       introDesc: 'We offer two types of cruises designed to provide unique and memorable experiences:',
@@ -48,6 +54,12 @@ export default function Cruceros() {
       dueroP2PDuration: '8 D\u00edas / 7 Noches',
       dueroP2PDesc: 'Un viaje extendido de 8 d\u00edas por el magn\u00edfico valle del Duero. Desde Oporto hasta Salamanca, descubra Guimar\u00e3es, el encantador barrio pesquero de Afurada y la regi\u00f3n vin\u00edcola de Oporto. Disfrute de noches de flamenco, fado y gala con todas las comidas y bebidas incluidas.',
       dueroP2PHighlights: ['8 D\u00edas / 7 Noches', 'Guimar\u00e3es y Afurada', 'Noches de Fado y Flamenco', 'Todo Incluido a Bordo'],
+      christmasTitle: 'Navidad en el Guadalquivir y la Bah\u00eda de C\u00e1diz',
+      christmasDuration: '6 D\u00edas / 5 Noches',
+      christmasDates: '22 - 27 Dic, 2026',
+      christmasRoute: 'Sevilla (Ida y Vuelta)',
+      christmasDesc: 'Celebre la Navidad navegando por el Guadalquivir a trav\u00e9s de Andaluc\u00eda. Disfrute de la Nochebuena a bordo, visite Sevilla, C\u00e1diz, Jerez y C\u00f3rdoba. Cena especial de Nochebuena con vinos, Misa del Gallo y obsequio de Navidad. Todas las comidas y bebidas incluidas.',
+      christmasHighlights: ['Crucero Navide\u00f1o', 'Sevilla y C\u00e1diz', 'Excursi\u00f3n a C\u00f3rdoba', 'Todo Incluido a Bordo'],
       moreComing: 'M\u00e1s cruceros pr\u00f3ximamente',
       moreComingDesc: 'Estamos trabajando en agregar m\u00e1s opciones de cruceros. Cont\u00e1ctenos para ser el primero en enterarse.',
       introDesc: 'Contamos con dos tipos de cruceros dise\u00f1ados para ofrecer experiencias \u00fanicas y memorables:',
@@ -218,6 +230,57 @@ export default function Cruceros() {
               <div className="flex items-center justify-between">
                 <span className="text-sm text-gray-400">{c.operator}</span>
                 <span className="inline-flex items-center text-[#0c4a6e] font-semibold group-hover:translate-x-1 transition-transform">
+                  {c.viewCruise}
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </span>
+              </div>
+            </div>
+          </div>
+        </Link>
+
+        {/* Guadalquivir Christmas Cruise Card */}
+        <Link
+          to="/cruceros/guadalquivir-christmas"
+          className="group block bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-[#991b1b]/20 mb-12"
+        >
+          <div className="md:flex">
+            <div className="md:w-2/5 bg-gradient-to-br from-[#7f1d1d] via-[#991b1b] to-[#1a2b5c] p-8 md:p-10 text-white flex flex-col justify-center relative overflow-hidden">
+              <div className="absolute top-4 right-4 opacity-10">
+                <Gift className="w-32 h-32" />
+              </div>
+              <div className="relative">
+                <span className="inline-block bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4 backdrop-blur-sm">
+                  {c.christmasDates}
+                </span>
+                <h3 className="text-2xl md:text-3xl font-bold mb-3">
+                  {c.christmasTitle}
+                </h3>
+                <div className="flex flex-wrap gap-3 text-sm">
+                  <span className="flex items-center bg-white/10 px-3 py-1.5 rounded-lg">
+                    <Calendar className="w-4 h-4 mr-1.5" />
+                    {c.christmasDuration}
+                  </span>
+                  <span className="flex items-center bg-white/10 px-3 py-1.5 rounded-lg">
+                    <MapPin className="w-4 h-4 mr-1.5" />
+                    {c.christmasRoute}
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="md:w-3/5 p-8 md:p-10 flex flex-col justify-center">
+              <p className="text-gray-600 leading-relaxed mb-6">
+                {c.christmasDesc}
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {c.christmasHighlights.map((h, i) => (
+                  <span key={i} className="bg-red-50 text-[#991b1b] text-sm font-medium px-3 py-1.5 rounded-full border border-red-100">
+                    {h}
+                  </span>
+                ))}
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-400">{c.operator}</span>
+                <span className="inline-flex items-center text-[#991b1b] font-semibold group-hover:translate-x-1 transition-transform">
                   {c.viewCruise}
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </span>
