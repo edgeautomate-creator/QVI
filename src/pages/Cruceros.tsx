@@ -1,6 +1,6 @@
 import { useLanguage } from '../contexts/LanguageContext';
 import { Link } from 'react-router-dom';
-import { Anchor, Ship, Calendar, MapPin, ArrowRight, Phone, Mail, Waves, Gift, Compass } from 'lucide-react';
+import { Anchor, Ship, Calendar, MapPin, ArrowRight, Phone, Mail, Waves, Gift, Compass, Wine } from 'lucide-react';
 
 export default function Cruceros() {
   const { language, t } = useLanguage();
@@ -49,6 +49,11 @@ export default function Cruceros() {
       berlinPragueRoute: 'Berlin \u2192 Prague',
       berlinPragueDesc: 'A journey from Berlin to Prague along the Elbe through historic Germany and the Czech Republic. Discover Potsdam\'s Sanssouci gardens, Luther\'s Wittenberg, Meissen\'s porcelain, Dresden (the "Florence of the Elbe"), the Saxon Switzerland rock formations, and Prague\'s Golden City. All meals and beverages included onboard.',
       berlinPragueHighlights: ['Berlin & Sanssouci', 'Dresden & Meissen', 'Saxon Switzerland', 'Prague Golden City'],
+      garonneTitle: 'The Garonne & Dordogne from Bordeaux (Port-to-Port)',
+      garonneDuration: '6 Days / 5 Nights',
+      garonneRoute: 'Bordeaux (Round Trip)',
+      garonneDesc: 'Navigate the heart of UNESCO-listed Bordeaux and its wine country. Discover the M\u00e9doc grand crus, the Vauban citadel of Blaye, medieval Saint-\u00c9milion, and the Bassins des Lumi\u00e8res immersive art experience. Includes an onboard oyster tasting paired with white wine. All meals and beverages included.',
+      garonneHighlights: ['Bordeaux UNESCO Heritage', 'M\u00e9doc Grand Crus', 'Saint-\u00c9milion Medieval', 'Onboard Oyster Tasting'],
       moreComing: 'More cruises coming soon',
       moreComingDesc: 'We are working on adding more cruise options. Contact us to be the first to know.',
       introDesc: 'We offer two types of cruises designed to provide unique and memorable experiences:',
@@ -102,6 +107,11 @@ export default function Cruceros() {
       berlinPragueRoute: 'Berl\u00edn \u2192 Praga',
       berlinPragueDesc: 'Un viaje de Berl\u00edn a Praga por el Elba a trav\u00e9s de la Alemania hist\u00f3rica y la Rep\u00fablica Checa. Descubra los jardines de Sanssouci en Potsdam, la Wittenberg de Lutero, la porcelana de Meissen, Dresde (la "Florencia del Elba"), las formaciones de la Suiza sajona y la Ciudad Dorada de Praga. Todas las comidas y bebidas incluidas a bordo.',
       berlinPragueHighlights: ['Berl\u00edn y Sanssouci', 'Dresde y Meissen', 'Suiza Sajona', 'Praga Ciudad Dorada'],
+      garonneTitle: 'El Garona y el Dorda\u00f1a desde Burdeos (Puerto/Puerto)',
+      garonneDuration: '6 D\u00edas / 5 Noches',
+      garonneRoute: 'Burdeos (Ida y Vuelta)',
+      garonneDesc: 'Navegue por el coraz\u00f3n de la Burdeos Patrimonio de la Humanidad y su tierra del vino. Descubra los grands crus del M\u00e9doc, la ciudadela Vauban de Blaye, el medieval Saint-\u00c9milion y la experiencia inmersiva de los Bassins des Lumi\u00e8res. Incluye degustaci\u00f3n de ostras a bordo con vino blanco. Todas las comidas y bebidas incluidas.',
+      garonneHighlights: ['Burdeos Patrimonio UNESCO', 'Grands Crus del M\u00e9doc', 'Saint-\u00c9milion Medieval', 'Degustaci\u00f3n de Ostras'],
       moreComing: 'M\u00e1s cruceros pr\u00f3ximamente',
       moreComingDesc: 'Estamos trabajando en agregar m\u00e1s opciones de cruceros. Cont\u00e1ctenos para ser el primero en enterarse.',
       introDesc: 'Contamos con dos tipos de cruceros dise\u00f1ados para ofrecer experiencias \u00fanicas y memorables:',
@@ -527,6 +537,57 @@ export default function Cruceros() {
               <div className="flex items-center justify-between">
                 <span className="text-sm text-gray-400">{c.operator}</span>
                 <span className="inline-flex items-center text-[#2d5a3d] font-semibold group-hover:translate-x-1 transition-transform">
+                  {c.viewCruise}
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </span>
+              </div>
+            </div>
+          </div>
+        </Link>
+
+        {/* Garonne / Bordeaux Cruise Card */}
+        <Link
+          to="/cruceros/garonne-bordeaux"
+          className="group block bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-[#7b2d3e]/20 mb-12"
+        >
+          <div className="md:flex">
+            <div className="md:w-2/5 p-8 md:p-10 text-white flex flex-col justify-center relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #4a1020 0%, #7b2d3e 50%, #3d1a0e 100%)' }}>
+              <div className="absolute top-4 right-4 opacity-10">
+                <Wine className="w-32 h-32" />
+              </div>
+              <div className="relative">
+                <span className="inline-block bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4 backdrop-blur-sm">
+                  {c.featured}
+                </span>
+                <h3 className="text-2xl md:text-3xl font-bold mb-3">
+                  {c.garonneTitle}
+                </h3>
+                <div className="flex flex-wrap gap-3 text-sm">
+                  <span className="flex items-center bg-white/10 px-3 py-1.5 rounded-lg">
+                    <Calendar className="w-4 h-4 mr-1.5" />
+                    {c.garonneDuration}
+                  </span>
+                  <span className="flex items-center bg-white/10 px-3 py-1.5 rounded-lg">
+                    <MapPin className="w-4 h-4 mr-1.5" />
+                    {c.garonneRoute}
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="md:w-3/5 p-8 md:p-10 flex flex-col justify-center">
+              <p className="text-gray-600 leading-relaxed mb-6">
+                {c.garonneDesc}
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {c.garonneHighlights.map((h, i) => (
+                  <span key={i} className="bg-rose-50 text-[#7b2d3e] text-sm font-medium px-3 py-1.5 rounded-full border border-rose-100">
+                    {h}
+                  </span>
+                ))}
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-400">{c.operator}</span>
+                <span className="inline-flex items-center text-[#7b2d3e] font-semibold group-hover:translate-x-1 transition-transform">
                   {c.viewCruise}
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </span>
