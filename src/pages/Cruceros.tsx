@@ -34,6 +34,11 @@ export default function Cruceros() {
       croatiaRoute: 'Dubrovnik (Round Trip)',
       croatiaDesc: 'A unique journey through Croatia and Montenegro at the heart of the Dalmatian Coast. Discover Dubrovnik, the "Pearl of the Adriatic", the islands of Mljet, Korcula, and Hvar, the waterfalls of Krka National Park, and the splendor of the Bay of Kotor. All meals and beverages included onboard.',
       croatiaHighlights: ['Dalmatian Coast', 'Bay of Kotor', 'Krka National Park', 'All-Inclusive Onboard'],
+      rhineTitle: 'Treasures of the Rhine (Port-to-Port)',
+      rhineDuration: '8 Days / 7 Nights',
+      rhineRoute: 'Amsterdam \u2192 Basel',
+      rhineDesc: 'From Amsterdam to Basel, a cruise rich in history. Discover Amsterdam\u2019s canals, the Keukenhof floral park, the open-air museum of Arnhem, Cologne\u2019s Gothic cathedral, the most beautiful stretch of the Rhine, Strasbourg, and the Alsatian wine capital of Colmar. All meals and beverages included onboard.',
+      rhineHighlights: ['Amsterdam & Keukenhof', 'Cologne Cathedral', 'Strasbourg & Colmar', 'All-Inclusive Onboard'],
       moreComing: 'More cruises coming soon',
       moreComingDesc: 'We are working on adding more cruise options. Contact us to be the first to know.',
       introDesc: 'We offer two types of cruises designed to provide unique and memorable experiences:',
@@ -72,6 +77,11 @@ export default function Cruceros() {
       croatiaRoute: 'Dubrovnik (Ida y Vuelta)',
       croatiaDesc: 'Un viaje \u00fanico por Croacia y Montenegro en el coraz\u00f3n de la costa D\u00e1lmata. Descubra Dubrovnik, la "perla del Adri\u00e1tico", las islas de Mljet, Korcula y Hvar, las cascadas del Parque Nacional de Krka y el esplendor de las Bocas de Kotor. Todas las comidas y bebidas incluidas a bordo.',
       croatiaHighlights: ['Costa D\u00e1lmata', 'Bocas de Kotor', 'Parque Nacional Krka', 'Todo Incluido a Bordo'],
+      rhineTitle: 'Los Tesoros del Rin (Puerto/Puerto)',
+      rhineDuration: '8 D\u00edas / 7 Noches',
+      rhineRoute: '\u00c1msterdam \u2192 Basilea',
+      rhineDesc: 'De \u00c1msterdam a Basilea, un crucero rico en historia. Descubra los canales de \u00c1msterdam, el parque floral del Keukenhof, el museo al aire libre de Arnhem, la catedral g\u00f3tica de Colonia, el tramo m\u00e1s bello del Rin, Estrasburgo y la capital de los vinos alsacianos, Colmar. Todas las comidas y bebidas incluidas a bordo.',
+      rhineHighlights: ['\u00c1msterdam y Keukenhof', 'Catedral de Colonia', 'Estrasburgo y Colmar', 'Todo Incluido a Bordo'],
       moreComing: 'M\u00e1s cruceros pr\u00f3ximamente',
       moreComingDesc: 'Estamos trabajando en agregar m\u00e1s opciones de cruceros. Cont\u00e1ctenos para ser el primero en enterarse.',
       introDesc: 'Contamos con dos tipos de cruceros dise\u00f1ados para ofrecer experiencias \u00fanicas y memorables:',
@@ -344,6 +354,57 @@ export default function Cruceros() {
               <div className="flex items-center justify-between">
                 <span className="text-sm text-gray-400">{c.operator}</span>
                 <span className="inline-flex items-center text-[#0e7490] font-semibold group-hover:translate-x-1 transition-transform">
+                  {c.viewCruise}
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </span>
+              </div>
+            </div>
+          </div>
+        </Link>
+
+        {/* Rhine Cruise Card */}
+        <Link
+          to="/cruceros/rhine-treasures"
+          className="group block bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-[#92400e]/20 mb-12"
+        >
+          <div className="md:flex">
+            <div className="md:w-2/5 bg-gradient-to-br from-[#78350f] via-[#92400e] to-[#1a2b5c] p-8 md:p-10 text-white flex flex-col justify-center relative overflow-hidden">
+              <div className="absolute top-4 right-4 opacity-10">
+                <Ship className="w-32 h-32" />
+              </div>
+              <div className="relative">
+                <span className="inline-block bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4 backdrop-blur-sm">
+                  {c.featured}
+                </span>
+                <h3 className="text-2xl md:text-3xl font-bold mb-3">
+                  {c.rhineTitle}
+                </h3>
+                <div className="flex flex-wrap gap-3 text-sm">
+                  <span className="flex items-center bg-white/10 px-3 py-1.5 rounded-lg">
+                    <Calendar className="w-4 h-4 mr-1.5" />
+                    {c.rhineDuration}
+                  </span>
+                  <span className="flex items-center bg-white/10 px-3 py-1.5 rounded-lg">
+                    <MapPin className="w-4 h-4 mr-1.5" />
+                    {c.rhineRoute}
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="md:w-3/5 p-8 md:p-10 flex flex-col justify-center">
+              <p className="text-gray-600 leading-relaxed mb-6">
+                {c.rhineDesc}
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {c.rhineHighlights.map((h, i) => (
+                  <span key={i} className="bg-amber-50 text-[#92400e] text-sm font-medium px-3 py-1.5 rounded-full border border-amber-100">
+                    {h}
+                  </span>
+                ))}
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-400">{c.operator}</span>
+                <span className="inline-flex items-center text-[#92400e] font-semibold group-hover:translate-x-1 transition-transform">
                   {c.viewCruise}
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </span>

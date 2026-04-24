@@ -31,6 +31,7 @@ import DueroCruise from './pages/DueroCruise';
 import DueroCruisePortToPort from './pages/DueroCruisePortToPort';
 import GuadalquivirChristmasCruise from './pages/GuadalquivirChristmasCruise';
 import CroatiaMontenegroCruise from './pages/CroatiaMontenegroCruise';
+import RhineCruise from './pages/RhineCruise';
 
 function App() {
   return (
@@ -62,6 +63,7 @@ function App() {
               <Route path="/cruceros/duero-port-to-port" element={<DueroCruisePortToPort />} />
               <Route path="/cruceros/guadalquivir-christmas" element={<GuadalquivirChristmasCruise />} />
               <Route path="/cruceros/croatia-montenegro" element={<CroatiaMontenegroCruise />} />
+              <Route path="/cruceros/rhine-treasures" element={<RhineCruise />} />
 
               <Route path="/tours" element={<Navigate to="/viajes-especiales" replace />} />
               <Route path="/paquetes" element={<Navigate to="/viajes-especiales" replace />} />
