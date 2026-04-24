@@ -1,6 +1,6 @@
 import { useLanguage } from '../contexts/LanguageContext';
 import { Link } from 'react-router-dom';
-import { Anchor, Ship, Calendar, MapPin, ArrowRight, Phone, Mail } from 'lucide-react';
+import { Anchor, Ship, Calendar, MapPin, ArrowRight, Phone, Mail, Waves } from 'lucide-react';
 
 export default function Cruceros() {
   const { language, t } = useLanguage();
@@ -20,6 +20,11 @@ export default function Cruceros() {
       dueroHighlights: ['Duero Valley Navigation', 'Salamanca Excursion', 'Porto Wine Region', 'All-Inclusive Onboard'],
       moreComing: 'More cruises coming soon',
       moreComingDesc: 'We are working on adding more cruise options. Contact us to be the first to know.',
+      introDesc: 'We offer two types of cruises designed to provide unique and memorable experiences:',
+      riverCruiseTitle: 'River Cruise',
+      riverCruiseDesc: 'An elegant and relaxed way to explore destinations along iconic rivers, with direct access to cities full of history, culture, and charm.',
+      oceanCruiseTitle: 'Ocean Cruise',
+      oceanCruiseDesc: 'A luxury experience on the high seas, where the journey becomes a destination in itself, with world-class entertainment, diverse cuisine, and stops at spectacular locations.',
       contactTitle: 'Questions About Our Cruises?',
       contactDesc: 'Our travel specialists are ready to help you find the perfect cruise.'
     },
@@ -37,7 +42,12 @@ export default function Cruceros() {
       dueroHighlights: ['Navegación Valle del Duero', 'Excursión a Salamanca', 'Región Vinícola de Oporto', 'Todo Incluido a Bordo'],
       moreComing: 'Más cruceros próximamente',
       moreComingDesc: 'Estamos trabajando en agregar más opciones de cruceros. Contáctenos para ser el primero en enterarse.',
-      contactTitle: 'Preguntas Sobre Nuestros Cruceros?',
+      introDesc: 'Contamos con dos tipos de cruceros diseñados para ofrecer experiencias únicas y memorables:',
+      riverCruiseTitle: 'Crucero fluvial',
+      riverCruiseDesc: 'Una forma elegante y relajada de explorar destinos a lo largo de ríos icónicos, con acceso directo a ciudades llenas de historia, cultura y encanto.',
+      oceanCruiseTitle: 'Crucero oceánico',
+      oceanCruiseDesc: 'Una experiencia de lujo en alta mar, donde el viaje se convierte en un destino en sí mismo, con entretenimiento de primer nivel, gastronomía variada y paradas en lugares espectaculares.',
+      contactTitle: '¿Preguntas Sobre Nuestros Cruceros?',
       contactDesc: 'Nuestros especialistas de viaje están listos para ayudarle a encontrar el crucero perfecto.'
     }
   };
@@ -64,6 +74,39 @@ export default function Cruceros() {
           <p className="text-xl md:text-2xl text-center max-w-3xl text-cyan-100">
             {c.heroSubtitle}
           </p>
+        </div>
+      </div>
+
+      {/* Cruise Types Introduction */}
+      <div className="bg-gradient-to-b from-gray-50 to-white py-16">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-10 leading-relaxed">
+            {c.introDesc}
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
+              <div className="w-12 h-12 bg-[#0c4a6e]/10 rounded-xl flex items-center justify-center mb-5">
+                <Ship className="w-6 h-6 text-[#0c4a6e]" />
+              </div>
+              <h3 className="text-xl font-bold text-[#0c4a6e] mb-3">
+                {c.riverCruiseTitle}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {c.riverCruiseDesc}
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
+              <div className="w-12 h-12 bg-[#0c4a6e]/10 rounded-xl flex items-center justify-center mb-5">
+                <Waves className="w-6 h-6 text-[#0c4a6e]" />
+              </div>
+              <h3 className="text-xl font-bold text-[#0c4a6e] mb-3">
+                {c.oceanCruiseTitle}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {c.oceanCruiseDesc}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
