@@ -44,6 +44,11 @@ export default function Cruceros() {
       danubeRoute: 'Budapest (Round Trip)',
       danubeDesc: 'Witness Europe\'s greatest river spectacle -- the Iron Gates. Discover Budapest, Belgrade, Osijek, Golubac Fortress, Novi Sad, P\u00e9cs, and the Hungarian Puszta. A journey through Hungary, Croatia, Serbia, and Romania, blending Austro-Hungarian, Ottoman, and Slavic cultures. All meals and beverages included onboard.',
       danubeHighlights: ['The Iron Gates Gorge', 'Budapest & Belgrade', 'P\u00e9cs & Hungarian Puszta', 'All-Inclusive Onboard'],
+      berlinPragueTitle: 'Berlin to Prague Along the Elbe (Port-to-Port)',
+      berlinPragueDuration: '9 Days / 8 Nights',
+      berlinPragueRoute: 'Berlin \u2192 Prague',
+      berlinPragueDesc: 'A journey from Berlin to Prague along the Elbe through historic Germany and the Czech Republic. Discover Potsdam\'s Sanssouci gardens, Luther\'s Wittenberg, Meissen\'s porcelain, Dresden (the "Florence of the Elbe"), the Saxon Switzerland rock formations, and Prague\'s Golden City. All meals and beverages included onboard.',
+      berlinPragueHighlights: ['Berlin & Sanssouci', 'Dresden & Meissen', 'Saxon Switzerland', 'Prague Golden City'],
       moreComing: 'More cruises coming soon',
       moreComingDesc: 'We are working on adding more cruise options. Contact us to be the first to know.',
       introDesc: 'We offer two types of cruises designed to provide unique and memorable experiences:',
@@ -92,6 +97,11 @@ export default function Cruceros() {
       danubeRoute: 'Budapest (Ida y Vuelta)',
       danubeDesc: 'Asista al mayor desfile fluvial de Europa: las Puertas de Hierro. Descubra Budapest, Belgrado, Osijek, la fortaleza de Golubac, Novi Sad, P\u00e9cs y la Puszta h\u00fangara. Un viaje por Hungr\u00eda, Croacia, Serbia y Ruman\u00eda entre culturas austroh\u00fangaras, otomanas y eslavas. Todas las comidas y bebidas incluidas a bordo.',
       danubeHighlights: ['Las Puertas de Hierro', 'Budapest y Belgrado', 'P\u00e9cs y la Puszta', 'Todo Incluido a Bordo'],
+      berlinPragueTitle: 'De Berl\u00edn a Praga por el Elba (Puerto/Puerto)',
+      berlinPragueDuration: '9 D\u00edas / 8 Noches',
+      berlinPragueRoute: 'Berl\u00edn \u2192 Praga',
+      berlinPragueDesc: 'Un viaje de Berl\u00edn a Praga por el Elba a trav\u00e9s de la Alemania hist\u00f3rica y la Rep\u00fablica Checa. Descubra los jardines de Sanssouci en Potsdam, la Wittenberg de Lutero, la porcelana de Meissen, Dresde (la "Florencia del Elba"), las formaciones de la Suiza sajona y la Ciudad Dorada de Praga. Todas las comidas y bebidas incluidas a bordo.',
+      berlinPragueHighlights: ['Berl\u00edn y Sanssouci', 'Dresde y Meissen', 'Suiza Sajona', 'Praga Ciudad Dorada'],
       moreComing: 'M\u00e1s cruceros pr\u00f3ximamente',
       moreComingDesc: 'Estamos trabajando en agregar m\u00e1s opciones de cruceros. Cont\u00e1ctenos para ser el primero en enterarse.',
       introDesc: 'Contamos con dos tipos de cruceros dise\u00f1ados para ofrecer experiencias \u00fanicas y memorables:',
@@ -466,6 +476,57 @@ export default function Cruceros() {
               <div className="flex items-center justify-between">
                 <span className="text-sm text-gray-400">{c.operator}</span>
                 <span className="inline-flex items-center text-[#1a4e7a] font-semibold group-hover:translate-x-1 transition-transform">
+                  {c.viewCruise}
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </span>
+              </div>
+            </div>
+          </div>
+        </Link>
+
+        {/* Berlin to Prague Cruise Card */}
+        <Link
+          to="/cruceros/berlin-prague"
+          className="group block bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-[#2d5a3d]/20 mb-12"
+        >
+          <div className="md:flex">
+            <div className="md:w-2/5 p-8 md:p-10 text-white flex flex-col justify-center relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #1c3d2e 0%, #2d5a3d 50%, #1a3a2a 100%)' }}>
+              <div className="absolute top-4 right-4 opacity-10">
+                <Ship className="w-32 h-32" />
+              </div>
+              <div className="relative">
+                <span className="inline-block bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4 backdrop-blur-sm">
+                  {c.featured}
+                </span>
+                <h3 className="text-2xl md:text-3xl font-bold mb-3">
+                  {c.berlinPragueTitle}
+                </h3>
+                <div className="flex flex-wrap gap-3 text-sm">
+                  <span className="flex items-center bg-white/10 px-3 py-1.5 rounded-lg">
+                    <Calendar className="w-4 h-4 mr-1.5" />
+                    {c.berlinPragueDuration}
+                  </span>
+                  <span className="flex items-center bg-white/10 px-3 py-1.5 rounded-lg">
+                    <MapPin className="w-4 h-4 mr-1.5" />
+                    {c.berlinPragueRoute}
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="md:w-3/5 p-8 md:p-10 flex flex-col justify-center">
+              <p className="text-gray-600 leading-relaxed mb-6">
+                {c.berlinPragueDesc}
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {c.berlinPragueHighlights.map((h, i) => (
+                  <span key={i} className="bg-emerald-50 text-[#2d5a3d] text-sm font-medium px-3 py-1.5 rounded-full border border-emerald-100">
+                    {h}
+                  </span>
+                ))}
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-400">{c.operator}</span>
+                <span className="inline-flex items-center text-[#2d5a3d] font-semibold group-hover:translate-x-1 transition-transform">
                   {c.viewCruise}
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </span>
