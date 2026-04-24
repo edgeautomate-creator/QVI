@@ -18,6 +18,10 @@ export default function Cruceros() {
       dueroTitle: 'The Duero Valley & Salamanca',
       dueroDesc: 'Sail through the stunning Duero Valley between Portugal and Spain. Visit UNESCO World Heritage Oporto, the magnificent Casa de Mateus, and the golden city of Salamanca with its cathedral and ancient university. All meals and beverages included onboard.',
       dueroHighlights: ['Duero Valley Navigation', 'Salamanca Excursion', 'Porto Wine Region', 'All-Inclusive Onboard'],
+      dueroP2PTitle: 'Duero River Cruise (Port-to-Port)',
+      dueroP2PDuration: '8 Days / 7 Nights',
+      dueroP2PDesc: 'An extended 8-day journey through the magnificent Duero Valley. From Oporto to Salamanca, discover Guimar\u00e3es, the charming Afurada fishing village, and the Porto wine region. Enjoy flamenco, fado, and gala evenings with all meals and beverages included.',
+      dueroP2PHighlights: ['8 Days / 7 Nights', 'Guimar\u00e3es & Afurada', 'Fado & Flamenco Nights', 'All-Inclusive Onboard'],
       moreComing: 'More cruises coming soon',
       moreComingDesc: 'We are working on adding more cruise options. Contact us to be the first to know.',
       introDesc: 'We offer two types of cruises designed to provide unique and memorable experiences:',
@@ -40,9 +44,13 @@ export default function Cruceros() {
       dueroTitle: 'El Valle del Duero y Salamanca',
       dueroDesc: 'Navegue por el impresionante valle del Duero entre Portugal y España. Visite Oporto, Patrimonio de la Humanidad, la magnífica Casa de Mateus y la ciudad dorada de Salamanca con su catedral y universidad ancestral. Todas las comidas y bebidas incluidas a bordo.',
       dueroHighlights: ['Navegación Valle del Duero', 'Excursión a Salamanca', 'Región Vinícola de Oporto', 'Todo Incluido a Bordo'],
-      moreComing: 'Más cruceros próximamente',
-      moreComingDesc: 'Estamos trabajando en agregar más opciones de cruceros. Contáctenos para ser el primero en enterarse.',
-      introDesc: 'Contamos con dos tipos de cruceros diseñados para ofrecer experiencias únicas y memorables:',
+      dueroP2PTitle: 'Crucero por el Duero (Puerto/Puerto)',
+      dueroP2PDuration: '8 D\u00edas / 7 Noches',
+      dueroP2PDesc: 'Un viaje extendido de 8 d\u00edas por el magn\u00edfico valle del Duero. Desde Oporto hasta Salamanca, descubra Guimar\u00e3es, el encantador barrio pesquero de Afurada y la regi\u00f3n vin\u00edcola de Oporto. Disfrute de noches de flamenco, fado y gala con todas las comidas y bebidas incluidas.',
+      dueroP2PHighlights: ['8 D\u00edas / 7 Noches', 'Guimar\u00e3es y Afurada', 'Noches de Fado y Flamenco', 'Todo Incluido a Bordo'],
+      moreComing: 'M\u00e1s cruceros pr\u00f3ximamente',
+      moreComingDesc: 'Estamos trabajando en agregar m\u00e1s opciones de cruceros. Cont\u00e1ctenos para ser el primero en enterarse.',
+      introDesc: 'Contamos con dos tipos de cruceros dise\u00f1ados para ofrecer experiencias \u00fanicas y memorables:',
       riverCruiseTitle: 'Crucero fluvial',
       riverCruiseDesc: 'Una forma elegante y relajada de explorar destinos a lo largo de ríos icónicos, con acceso directo a ciudades llenas de historia, cultura y encanto.',
       oceanCruiseTitle: 'Crucero oceánico',
@@ -151,6 +159,57 @@ export default function Cruceros() {
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
                 {c.dueroHighlights.map((h, i) => (
+                  <span key={i} className="bg-cyan-50 text-[#0c4a6e] text-sm font-medium px-3 py-1.5 rounded-full border border-cyan-100">
+                    {h}
+                  </span>
+                ))}
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-400">{c.operator}</span>
+                <span className="inline-flex items-center text-[#0c4a6e] font-semibold group-hover:translate-x-1 transition-transform">
+                  {c.viewCruise}
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </span>
+              </div>
+            </div>
+          </div>
+        </Link>
+
+        {/* Duero Port-to-Port Cruise Card */}
+        <Link
+          to="/cruceros/duero-port-to-port"
+          className="group block bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-[#0c4a6e]/20 mb-12"
+        >
+          <div className="md:flex">
+            <div className="md:w-2/5 bg-gradient-to-br from-[#155e75] via-[#0c4a6e] to-[#164e63] p-8 md:p-10 text-white flex flex-col justify-center relative overflow-hidden">
+              <div className="absolute top-4 right-4 opacity-10">
+                <Ship className="w-32 h-32" />
+              </div>
+              <div className="relative">
+                <span className="inline-block bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4 backdrop-blur-sm">
+                  {c.featured}
+                </span>
+                <h3 className="text-2xl md:text-3xl font-bold mb-3">
+                  {c.dueroP2PTitle}
+                </h3>
+                <div className="flex flex-wrap gap-3 text-sm">
+                  <span className="flex items-center bg-white/10 px-3 py-1.5 rounded-lg">
+                    <Calendar className="w-4 h-4 mr-1.5" />
+                    {c.dueroP2PDuration}
+                  </span>
+                  <span className="flex items-center bg-white/10 px-3 py-1.5 rounded-lg">
+                    <MapPin className="w-4 h-4 mr-1.5" />
+                    {c.route}
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="md:w-3/5 p-8 md:p-10 flex flex-col justify-center">
+              <p className="text-gray-600 leading-relaxed mb-6">
+                {c.dueroP2PDesc}
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {c.dueroP2PHighlights.map((h, i) => (
                   <span key={i} className="bg-cyan-50 text-[#0c4a6e] text-sm font-medium px-3 py-1.5 rounded-full border border-cyan-100">
                     {h}
                   </span>
