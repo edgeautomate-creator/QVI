@@ -60,14 +60,14 @@ export default function DueroCruise() {
       onBoard: 'A bordo',
       importantInfo: 'Información Importante',
       cta: 'Listo para Navegar el Duero?',
-      ctaText: 'Contáctenos hoy para reservar su camarote en este inolvidable crucero fluvial por Portugal y España.',
+      ctaText: 'Contáctenos hoy para reservar su cabina en este inolvidable crucero fluvial por Portugal y España.',
       callNow: 'Llamar Ahora',
       whatsapp: 'WhatsApp',
       formTitle: 'Solicitar Más Información',
       pricing: 'Precios',
       priceFrom: 'Desde 1,225 €',
-      pricingContact: 'Contáctenos para Precios de Camarotes',
-      pricingNote: 'Múltiples categorías de camarotes disponibles. Contáctenos para precios detallados, disponibilidad y tarifas de grupo.',
+      pricingContact: 'Contáctenos para Precios de Cabinas',
+      pricingNote: 'Múltiples categorías de cabinas disponibles. Contáctenos para precios detallados, disponibilidad y tarifas de grupo.',
       showMore: 'Ver todas las excursiones',
       showLess: 'Ver menos excursiones',
       croisiHighlights: 'Destacados CroisiEurope',
@@ -98,7 +98,7 @@ export default function DueroCruise() {
       'Todas las comidas y bebidas incluidas a bordo',
       'Entretenimiento temático: noche de flamenco, noche de gala y noche folclórica',
       'Disfrute de impresionantes desfiladeros y paisajes salvajes a lo largo del río',
-      'Camarotes exteriores con baño completo privado'
+      'Cabinas exteriores con baño completo privado'
     ]
   };
 
@@ -200,7 +200,7 @@ export default function DueroCruise() {
     es: [
       'Pensión completa desde la cena del primer día al desayuno del último',
       'Bebidas incluidas a bordo (excepto cartas especiales)',
-      'Camarote doble exterior con baño completo privado',
+      'Cabina doble exterior con baño completo privado',
       'Animación y actividades a bordo',
       'Asistencia a bordo durante todo el crucero',
       'Cóctel de bienvenida',
