@@ -25,7 +25,7 @@ export default function Cruceros() {
     },
     es: {
       heroTitle: 'Cruceros',
-      heroSubtitle: 'Descubra el mundo desde el agua con nuestras experiencias de crucero fluvial y oceánico',
+      heroSubtitle: 'Descubra el mundo desde el agua con nuestras experiencias en cruceros fluviales y oceánicos',
       featured: 'Crucero Destacado',
       availableCruises: 'Cruceros Disponibles',
       viewCruise: 'Ver Itinerario Completo',
