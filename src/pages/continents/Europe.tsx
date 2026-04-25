@@ -10,13 +10,25 @@ export default function Europe() {
       id: 'europe',
       title: language === 'es' ? 'La Europa Dorada' : 'Golden Europe',
       location: language === 'es' ? 'Madrid a Roma' : 'Madrid to Rome',
-      duration: language === 'es' ? '14 días' : '14 days',
-      price: '$3,899',
+      duration: language === 'es' ? '18 días' : '18 days',
+      price: '€3.270',
       image: 'https://images.pexels.com/photos/532826/pexels-photo-532826.jpeg?auto=compress&cs=tinysrgb&w=1920',
       link: '/europe-tour',
       description: language === 'es'
-        ? 'Recorre los tesoros culturales e históricos de Europa en un viaje inolvidable'
-        : 'Explore the cultural and historical treasures of Europe on an unforgettable journey'
+        ? 'Recorre los tesoros culturales e históricos de Europa en un viaje inolvidable de 18 días desde Madrid hasta Roma'
+        : 'Explore the cultural and historical treasures of Europe on an unforgettable 18-day journey from Madrid to Rome'
+    },
+    {
+      id: 'iberian-capitals',
+      title: language === 'es' ? 'Capitales Ibéricas' : 'Iberian Capitals',
+      location: language === 'es' ? 'Madrid a Oporto / Lisboa' : 'Madrid to Porto / Lisbon',
+      duration: language === 'es' ? '8-9 días' : '8-9 days',
+      price: '€1.300',
+      image: 'https://images.pexels.com/photos/1534560/pexels-photo-1534560.jpeg?auto=compress&cs=tinysrgb&w=1920',
+      link: '/europe/iberian-capitals',
+      description: language === 'es'
+        ? 'Madrid, Lisboa, Santiago de Compostela, Coimbra y Oporto: lo mejor de la Península Ibérica en un único viaje'
+        : 'Madrid, Lisbon, Santiago de Compostela, Coimbra, and Porto: the best of the Iberian Peninsula in one journey'
     }
   ];
 
