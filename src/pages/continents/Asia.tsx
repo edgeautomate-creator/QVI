@@ -19,6 +19,18 @@ export default function Asia() {
         : 'Discover the majestic combination of ancient tradition and modernity in Japan'
     },
     {
+      id: 'japan-express',
+      title: language === 'es' ? 'Japón Express' : 'Japan Express',
+      location: language === 'es' ? 'Osaka, Kioto, Hakone, Tokio' : 'Osaka, Kyoto, Hakone, Tokyo',
+      duration: language === 'es' ? '7 días' : '7 days',
+      price: '$2,835',
+      image: 'https://images.pexels.com/photos/1440476/pexels-photo-1440476.jpeg?auto=compress&cs=tinysrgb&w=1920',
+      link: '/asia/japan-express',
+      description: language === 'es'
+        ? 'Vive la esencia de Japón: templos milenarios, el tren bala Shinkansen, Hakone y el Monte Fuji'
+        : 'Experience the essence of Japan: ancient temples, the Shinkansen bullet train, Hakone and Mount Fuji'
+    },
+    {
       id: 'asia-maldives',
       title: language === 'es' ? 'Singapur, Bangkok y Maldivas' : 'Singapore, Bangkok & Maldives',
       location: language === 'es' ? 'Singapur, Tailandia, Maldivas' : 'Singapore, Thailand, Maldives',

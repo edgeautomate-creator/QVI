@@ -17,6 +17,7 @@ import SouthAfricaTour from './pages/SouthAfricaTour';
 import PolynesiaTour from './pages/PolynesiaTour';
 import Viajes from './pages/Viajes';
 import AsiaMaldivesTour from './pages/AsiaMaldivesTour';
+import JapanExpressTour from './pages/JapanExpressTour';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import ViajesEspeciales from './pages/ViajesEspeciales';
@@ -86,6 +87,7 @@ function App() {
               <Route path="/south-africa-tour" element={<SouthAfricaTour />} />
               <Route path="/polynesia-tour" element={<PolynesiaTour />} />
               <Route path="/asia-maldives-tour" element={<AsiaMaldivesTour />} />
+              <Route path="/asia/japan-express" element={<JapanExpressTour />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
