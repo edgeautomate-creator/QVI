@@ -35,6 +35,7 @@ import RhineCruise from './pages/RhineCruise';
 import DanubeCruise from './pages/DanubeCruise';
 import DanubeChristmasCruise from './pages/DanubeChristmasCruise';
 import IberianCapitalsTour from './pages/IberianCapitalsTour';
+import ViennaToDubrovnikTour from './pages/ViennaToDubrovnikTour';
 import BerlinPragueCruise from './pages/BerlinPragueCruise';
 import GaronneCruise from './pages/GaronneCruise';
 
@@ -81,6 +82,7 @@ function App() {
               <Route path="/japan-tour" element={<JapanTour />} />
               <Route path="/europe-tour" element={<EuropeTour />} />
               <Route path="/europe/iberian-capitals" element={<IberianCapitalsTour />} />
+              <Route path="/europe/vienna-to-dubrovnik" element={<ViennaToDubrovnikTour />} />
               <Route path="/south-africa-tour" element={<SouthAfricaTour />} />
               <Route path="/polynesia-tour" element={<PolynesiaTour />} />
               <Route path="/asia-maldives-tour" element={<AsiaMaldivesTour />} />

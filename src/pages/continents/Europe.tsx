@@ -29,6 +29,18 @@ export default function Europe() {
       description: language === 'es'
         ? 'Madrid, Lisboa, Santiago de Compostela, Coimbra y Oporto: lo mejor de la Península Ibérica en un único viaje'
         : 'Madrid, Lisbon, Santiago de Compostela, Coimbra, and Porto: the best of the Iberian Peninsula in one journey'
+    },
+    {
+      id: 'vienna-to-dubrovnik',
+      title: language === 'es' ? 'De Viena a Dubrovnik' : 'From Vienna to Dubrovnik',
+      location: language === 'es' ? 'Viena a Dubrovnik' : 'Vienna to Dubrovnik',
+      duration: language === 'es' ? '10-11 días' : '10-11 days',
+      price: '€2.250',
+      image: 'https://images.pexels.com/photos/2901209/pexels-photo-2901209.jpeg?auto=compress&cs=tinysrgb&w=1920',
+      link: '/europe/vienna-to-dubrovnik',
+      description: language === 'es'
+        ? 'De la grandeza imperial de Viena a la perla del Adriático, pasando por Eslovenia, Croacia y Bosnia-Herzegovina'
+        : 'From the imperial grandeur of Vienna to the pearl of the Adriatic, through Slovenia, Croatia, and Bosnia-Herzegovina'
     }
   ];
 
